@@ -101,20 +101,48 @@ const icons =
 const iconsContainer = document.getElementById("container")
 
 const typeToColor = {
-  "user": "blue",
-  "animal": "red",
-  "vegetable": "green"
+  "user": "purple",
+  "animal": "blue",
+  "vegetable": "yellow"
 }
 
-for (let i = 0; i < icons.length; i++) {
-  const { name, prefix, family, type } = icons[i]
+printAllIcons();
+const selectElement = document.getElementById("selectElement")
 
-  iconsContainer.innerHTML += `<div class="icon_box">
-                                  <div class="icon">
-                                    <i style="color:${typeToColor[type]}" class="${family} ${prefix}${name}"></i>
+
+selectElement.addEventListener("change", function () {
+  iconsContainer.innerHTML = ""
+  const allUsers = icons.filter(obj => obj.type === event.target.value)
+
+  if (event.target.value === "all") {
+    printAllIcons()
+  }
+
+  for (let i = 0; i < allUsers.length; i++) {
+    const { name, prefix, family, type } = allUsers[i]
+    iconsContainer.innerHTML += `<div class="icon_box">
+                                    <div class="icon">
+                                      <i style="color:${typeToColor[type]}" class="${family} ${prefix}${name}"></i>
+                                      </div>
+                                      <div class="icon_title">
+                                      <h4>${name.toUpperCase()}</h4>
                                     </div>
-                                    <div class="icon_title">
-                                    <h4>${name.toUpperCase()}</h4>
-                                    </div>
-                                    </div>`
+                                  </div>`
+  }
+})
+
+
+function printAllIcons() {
+  for (let i = 0; i < icons.length; i++) {
+    const { name, prefix, family, type } = icons[i]
+
+    iconsContainer.innerHTML += `<div class="icon_box">
+                                    <div class="icon">
+                                      <i style="color:${typeToColor[type]}" class="${family} ${prefix}${name}"></i>
+                                      </div>
+                                      <div class="icon_title">
+                                      <h4>${name.toUpperCase()}</h4>
+                                      </div>
+                                      </div>`
+  }
 }
