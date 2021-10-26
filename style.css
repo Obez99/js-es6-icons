@@ -49,4 +49,13 @@ h3{
   background-color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  font-size: 45px;
 }
