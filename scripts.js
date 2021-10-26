@@ -100,15 +100,21 @@ const icons =
 
 const iconsContainer = document.getElementById("container")
 
+const typeToColor = {
+  "user": "blue",
+  "animal": "red",
+  "vegetable": "green"
+}
+
 for (let i = 0; i < icons.length; i++) {
-  const { name, prefix, family } = icons[i]
+  const { name, prefix, family, type } = icons[i]
 
   iconsContainer.innerHTML += `<div class="icon_box">
-                                <div class="icon">
-                                  <i class="${family} ${prefix}${name}"></i>
-                                </div>
-                                <div class="icon_title">
-                                  <h4>${name.toUpperCase()}</h4>
-                                </div>
-                              </div>`
+                                  <div class="icon">
+                                    <i style="color:${typeToColor[type]}" class="${family} ${prefix}${name}"></i>
+                                    </div>
+                                    <div class="icon_title">
+                                    <h4>${name.toUpperCase()}</h4>
+                                    </div>
+                                    </div>`
 }
