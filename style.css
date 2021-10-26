@@ -1,0 +1,52 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Comic Neue', cursive;
+  height: 100vh;
+  background-color: rgb(240, 239, 239);
+}
+
+header, main{
+  padding-top:25px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+header{
+  color:rgb(4, 184, 255);
+  background-color: white;
+}
+
+nav{
+  padding: 20px 0;
+  background-color:rgb(4, 184, 255);;
+  color:white;
+  display:flex;
+  justify-content: center;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h3{
+  padding: 0 10px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.icon_box{
+  width: calc(100% / 5 - 100px);
+  height:  150px;
+  margin: 0 50px;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px;
+}
