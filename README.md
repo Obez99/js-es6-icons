@@ -8,3 +8,9 @@ A **filter** is also implemented to filter icons by category type.<br>
 **Features**:<br>
 - Icons filter.
 - Color associated with icons category.
+
+**Screenshots**:<br>
+
+![fonticons1](https://user-images.githubusercontent.com/85038274/151701389-ec5cabe9-2f26-4195-9069-00508a000fc0.PNG)
+
+![fonticons2](https://user-images.githubusercontent.com/85038274/151701393-59ecdd96-78e1-4b21-ba15-b42156a4f6aa.PNG)
